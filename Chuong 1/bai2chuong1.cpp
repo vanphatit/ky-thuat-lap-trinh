@@ -45,6 +45,9 @@ void output(FRACTION fr){
 	if(fr.numer < 0 && fr.denomi < 0){
 		fr.numer = abs(fr.numer);
 		fr.denomi = abs(fr.denomi);
+	} else if(fr.denomi < 0){
+		fr.numer *= -1;
+		fr.denomi *= -1;
 	}
 		
 	cout << fr.numer << " " << fr.denomi;
@@ -116,6 +119,7 @@ void inverse(int n, FRACTION fr[]){
 		fr[i].numer = fr[i].denomi;
 		fr[i].denomi = temp;
 		output(fr[i]);
-		cout << " ";
+		if(i < n - 1)
+			cout << " ";
 	}
 }
