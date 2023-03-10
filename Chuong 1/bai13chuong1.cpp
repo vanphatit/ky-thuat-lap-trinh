@@ -19,7 +19,7 @@ int main() {
     cin.ignore(1);
     for(int i = 0; i < n; i++){
         input(bk[i]);
-        count += 1;
+        count += bk[i].SL;
     }
     char tenSach[30];
     cin.ignore(1);
@@ -35,7 +35,8 @@ int main() {
     if (!found) {
         cout << "Khong Tim Thay";
     }
-    cout << endl << count;
+    
+    cout << count;
 }
 
 void input(BOOK &bk) {

@@ -24,13 +24,13 @@ int main() {
         if(strcmp("A", cpt[i].cate) == 0)
         	count += 1;
     }
-    cout << endl;
     sortComponent(cpt, n);
     for(int i = 0; i < n; i++){
         output(cpt[i]);
         cout << endl;
     }
-    cout << count;
+    if(count >= 10) cout << 0;
+    	else cout << -1;
 }
 
 bool cmp(COMPONENT a, COMPONENT b) {

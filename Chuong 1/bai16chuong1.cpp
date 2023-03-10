@@ -30,7 +30,6 @@ int main() {
         if(max_Price < gd[i].unitP)
         	max_Price = gd[i].unitP;
     }
-    cout << endl;
     
     for(int i = 0; i < n; i++)
     	if(max_SLTon == gd[i].SLTon){
