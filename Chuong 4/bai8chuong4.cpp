@@ -9,10 +9,15 @@ int A[10000];
 int main(){
 	int n;
 	cin >> n;
+	int index = 0;
 	
 	for(int i = 0; i < n; i++)
-		cin >> A[i];
-	cout << minPrime(n);
+	{
+		cin >> A[index];
+		if(isPrime(A[index], A[index]))
+			index = index + 1;
+	}
+	cout << minPrime(index);
 }
 
 bool isPrime(int n, int i){
@@ -23,7 +28,7 @@ bool isPrime(int n, int i){
 }
 
 int minPrime(int n){
-	if(n == 2) return n;
+	if(n == 1) return A[0];
 	else
 		if(A[n-1] < minPrime(n-1)){
 			return A[n-1];
