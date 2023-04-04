@@ -15,7 +15,6 @@ int main() {
     }
 
     int max = 0;
-    int current = 1;
     int most = INT_MAX;
 
     int fre[MAX_SIZE];

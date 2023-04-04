@@ -3,28 +3,32 @@
 using namespace std;
 
 int minPrime(int n);
-bool isPrime(int n, int i);
+bool isPrime(int n);
 int A[10000];
 
 int main(){
 	int n;
 	cin >> n;
 	int index = 0;
-	
 	for(int i = 0; i < n; i++)
 	{
 		cin >> A[index];
-		if(isPrime(A[index], A[index]))
+		if(isPrime(A[index])){
 			index = index + 1;
+		}
 	}
-	cout << minPrime(index);
+	if(index > 0)
+		cout << minPrime(index);
+	else 
+		cout << -1;
 }
 
-bool isPrime(int n, int i){
+bool isPrime(int n){
 	if(n <= 2) return (n == 2) ? true : false;
-	if(n % i == 0) return false;
-	if(i * i > n) return true;
-	return isPrime(n, i + 1);
+	for(int i = 2; i < sqrt(n); i++)
+		if(n % i == 0)
+			return false;
+	return true;
 }
 
 int minPrime(int n){

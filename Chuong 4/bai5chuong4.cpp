@@ -15,7 +15,7 @@ long long nCk(int n, int k){
 	if(k==0||k==n)
 		return 1;
 	else
-		return nCk(n-1,k)+nCk(n-1,k-1);
+		return nCk(n-1,k) + nCk(n-1,k-1);
 }
 
 //long long giaithua(int n){
