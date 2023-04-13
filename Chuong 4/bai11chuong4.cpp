@@ -23,10 +23,8 @@ void crBinary(int n, int A[], int index){
 		output(A,n);
 		return;
 	}
+	A[index] = 0;
+	crBinary(n,A,index+1);
 	A[index] = 1;
-	crBinary(n,A,index+1);
-	A[index] = 2;
-	crBinary(n,A,index+1);
-	A[index] = 3;
 	crBinary(n,A,index+1);
 }
